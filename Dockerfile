@@ -1,9 +1,12 @@
 FROM ubuntu:latest
 
-RUN sudo apt-add-repository 'deb http://packages.treasure-data.com/debian/ lucid contrib'd
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y curl git td-agent
+RUN apt-get install -y curl git
+
+
+RUN curl -L http://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
+RUN /etc/init.d/td-agent start
 
 
 
