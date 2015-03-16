@@ -11,5 +11,5 @@ ADD Resource/td-agnet.conf /etc/td-agent/td-agnet.conf
 RUN /etc/init.d/td-agent start
 RUN less /var/log/td-agent/td-agent.log
 
-EXPOSE 8888
+EXPOSE 8888 80
 
